@@ -64,6 +64,8 @@ Keep the answer concise. Resource metadata is not the place for a long review.
 
 - Marketing claims and exaggerated language
 - Generic introductions that delay the actual problem
+- Explanations before a list or table when the heading already gives enough context
+- Repeating review or maintenance rules in sections where they do not help the reader
 - Declaring one tool the winner when the choice depends on the workflow
 - Long sentences when two short sentences are easier to understand
 - Em dashes
