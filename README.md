@@ -98,7 +98,7 @@ See [Project Ideas to Try](projects/project-ideas.md) for scopes and review crit
 
 Keeping the collection current is more than checking whether a link still opens. A course can become paid, a notebook can stop working, or a better resource can become available.
 
-The `data/resources.yaml` file is our source of truth. Validation checks the fields, category names, resource types, dates, and duplicates. A weekly process checks the links, monthly discovery proposes new candidates, and a quarterly report shows us which resources might need another review.
+The `data/resources.yaml` file is our source of truth. Validation checks the fields, category names, resource types, dates, and duplicates. A monthly process checks the links and proposes new candidates, while a quarterly report shows us which resources might need another review.
 
 The workflow is:
 

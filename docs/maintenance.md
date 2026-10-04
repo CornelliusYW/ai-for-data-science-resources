@@ -17,15 +17,15 @@ python scripts/generate_readme.py --check
 python scripts/check_internal_links.py
 ```
 
-## Weekly link check
+## Monthly link check
 
-The link workflow runs every Saturday at 09:30 Asia/Jakarta, which is 02:30 UTC. It records failures, redirects, and websites that block an automated request. When it finds a problem, it creates or updates an issue named `Broken Resource Links`. It never deletes a resource.
+The link workflow runs on the first Saturday of every month at 09:30 Asia/Jakarta, which is 02:30 UTC. It records failures, redirects, and websites that block an automated request. When it finds a problem, it creates or updates an issue named `Broken Resource Links`. It never deletes a resource.
 
 For example, an HTTP 401, 403, or 429 does not always mean the resource is gone. Some documentation websites block automated clients. That is why we send these results for manual review instead of treating them as dead links.
 
 ## Monthly discovery
 
-GitHub Actions cron cannot express “the first Saturday in Asia/Jakarta” reliably as one portable expression. The workflow runs on the weekly Saturday schedule, then continues only when the Jakarta calendar day is 1 through 7. A manual run bypasses the guard.
+GitHub Actions cron cannot express “the first Saturday in Asia/Jakarta” reliably as one portable expression. Both monthly workflows run on the weekly Saturday schedule, then continue only when the Jakarta calendar day is 1 through 7. A manual run bypasses the guard.
 
 The discovery script uses targeted GitHub Search API queries and removes URLs we already have. It writes `Monthly Resource Review - YYYY-MM` as an issue. We receive a smaller candidate list without adding anything automatically.
 
