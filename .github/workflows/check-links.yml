@@ -1,0 +1,63 @@
+name: Check resource links
+
+on:
+  schedule:
+    - cron: "30 2 * * 6" # Saturday 09:30 Asia/Jakarta
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: weekly-resource-link-check
+  cancel-in-progress: false
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Set up Python
+        uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38 # v5.4.0
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Validate resource data
+        run: python scripts/validate_resources.py
+      - name: Check links
+        id: links
+        continue-on-error: true
+        run: python scripts/check_links.py
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08 # v4.6.0
+        with:
+          name: resource-link-report
+          path: reports/link-check.*
+          retention-days: 30
+      - name: Create, update, or close review issue
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          title="Broken Resource Links"
+          issue="$(gh issue list --state open --search "$title in:title" --json number,title --jq ".[] | select(.title == \"$title\") | .number" | head -n 1)"
+          if grep -q "Items for review: 0" reports/link-check.md; then
+            if [ -n "$issue" ]; then
+              gh issue close "$issue" --comment "The latest scheduled check found no items for review."
+            fi
+          elif [ -n "$issue" ]; then
+            gh issue edit "$issue" --body-file reports/link-check.md
+            gh issue comment "$issue" --body "Updated by the latest scheduled link check."
+          else
+            gh issue create --title "$title" --body-file reports/link-check.md
+          fi
+      - name: Fail for confirmed request errors
+        if: steps.links.outcome == 'failure'
+        run: exit 1
+

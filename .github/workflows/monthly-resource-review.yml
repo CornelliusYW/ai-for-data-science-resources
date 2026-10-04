@@ -1,0 +1,57 @@
+name: Monthly resource discovery
+
+on:
+  schedule:
+    - cron: "30 2 * * 6" # Weekly gate; only the first Saturday continues
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: monthly-resource-discovery
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Jakarta calendar
+        id: calendar
+        shell: bash
+        run: |
+          day="$(TZ=Asia/Jakarta date +%d)"
+          if [ "$day" -le 7 ]; then echo "run=true" >> "$GITHUB_OUTPUT"; else echo "run=false" >> "$GITHUB_OUTPUT"; fi
+      - name: Check out repository
+        if: github.event_name == 'workflow_dispatch' || steps.calendar.outputs.run == 'true'
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Set up Python
+        if: github.event_name == 'workflow_dispatch' || steps.calendar.outputs.run == 'true'
+        uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38 # v5.4.0
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install dependencies
+        if: github.event_name == 'workflow_dispatch' || steps.calendar.outputs.run == 'true'
+        run: python -m pip install -r requirements.txt
+      - name: Discover candidates
+        if: github.event_name == 'workflow_dispatch' || steps.calendar.outputs.run == 'true'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/discover_resources.py
+      - name: Create or update monthly review issue
+        if: github.event_name == 'workflow_dispatch' || steps.calendar.outputs.run == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          month="$(TZ=Asia/Jakarta date +%Y-%m)"
+          title="Monthly Resource Review - $month"
+          issue="$(gh issue list --state open --search "$title in:title" --json number,title --jq ".[] | select(.title == \"$title\") | .number" | head -n 1)"
+          if [ -n "$issue" ]; then
+            gh issue edit "$issue" --body-file reports/monthly-resource-review.md
+          else
+            gh issue create --title "$title" --body-file reports/monthly-resource-review.md
+          fi
+

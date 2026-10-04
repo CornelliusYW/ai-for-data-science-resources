@@ -1,0 +1,67 @@
+name: Quarterly curation review
+
+on:
+  schedule:
+    - cron: "30 2 * * 6" # Weekly gate; only first Saturdays in Jan/Apr/Jul/Oct continue
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: quarterly-curation-review
+  cancel-in-progress: false
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Jakarta calendar
+        id: calendar
+        shell: bash
+        run: |
+          day="$(TZ=Asia/Jakarta date +%d)"
+          month="$(TZ=Asia/Jakarta date +%m)"
+          if [ "$day" -le 7 ] && [[ "$month" =~ ^(01|04|07|10)$ ]]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Check out repository
+        if: github.event_name == 'workflow_dispatch' || steps.calendar.outputs.run == 'true'
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Set up Python
+        if: github.event_name == 'workflow_dispatch' || steps.calendar.outputs.run == 'true'
+        uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38 # v5.4.0
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install dependencies
+        if: github.event_name == 'workflow_dispatch' || steps.calendar.outputs.run == 'true'
+        run: python -m pip install -r requirements.txt
+      - name: Validate data
+        if: github.event_name == 'workflow_dispatch' || steps.calendar.outputs.run == 'true'
+        run: python scripts/validate_resources.py
+      - name: Generate review report
+        if: github.event_name == 'workflow_dispatch' || steps.calendar.outputs.run == 'true'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/generate_resource_report.py
+      - name: Create or update quarterly issue
+        if: github.event_name == 'workflow_dispatch' || steps.calendar.outputs.run == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          year="$(TZ=Asia/Jakarta date +%Y)"
+          month="$(TZ=Asia/Jakarta date +%m)"
+          quarter="$(( (10#$month - 1) / 3 + 1 ))"
+          title="Quarterly Resource Curation - $year-Q$quarter"
+          issue="$(gh issue list --state open --search "$title in:title" --json number,title --jq ".[] | select(.title == \"$title\") | .number" | head -n 1)"
+          if [ -n "$issue" ]; then
+            gh issue edit "$issue" --body-file reports/quarterly-curation-review.md
+          else
+            gh issue create --title "$title" --body-file reports/quarterly-curation-review.md
+          fi
+

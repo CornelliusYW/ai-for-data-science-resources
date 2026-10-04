@@ -1,0 +1,110 @@
+name: Resource suggestion
+description: Suggest a practical learning resource for AI in data science
+title: "Resource suggestion: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for the suggestion. We can review it better when you link directly to the learning material and explain how a data professional would use it.
+  - type: input
+    id: name
+    attributes:
+      label: Resource name
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      description: Use a stable direct HTTPS link.
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - AI-Assisted Analysis and SQL
+        - AI for Data Preparation and Extraction
+        - AI-Assisted Machine Learning
+        - Tabular Foundation Models
+        - Coding Agents and Context Engineering
+        - Data Science Agents
+        - Evaluation and Reproducibility
+        - MLOps and Production
+        - Visualization and Communication
+        - Time Series Foundation Models
+        - End-to-End Courses
+        - New category proposal
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Resource type
+      options:
+        - Course
+        - Tutorial
+        - GitHub Curriculum
+        - Notebook Collection
+        - Official Documentation
+        - Workshop
+        - Book
+        - Guide
+        - Tool
+        - Template
+        - Example Project
+        - Interactive Learning
+        - Video Course
+    validations:
+      required: true
+  - type: textarea
+    id: value
+    attributes:
+      label: Why is it useful?
+      description: Explain what we can learn and where it fits in data science work.
+    validations:
+      required: true
+  - type: dropdown
+    id: access
+    attributes:
+      label: Is it free?
+      options:
+        - Yes
+        - Partly or free tier
+        - No
+        - Unsure
+    validations:
+      required: true
+  - type: dropdown
+    id: hands_on
+    attributes:
+      label: Does it include hands-on exercises?
+      options:
+        - Yes, with code, notebooks, exercises, or projects
+        - No, it is mainly explanatory
+        - Unsure
+    validations:
+      required: true
+  - type: input
+    id: updated
+    attributes:
+      label: When was it last updated?
+      description: Provide a date or release if known.
+  - type: textarea
+    id: affiliation
+    attributes:
+      label: Are you affiliated with the resource?
+      description: State your relationship. Write "No affiliation" when none exists.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Final checks
+      options:
+        - label: I checked that this URL works and points directly to the resource.
+          required: true
+        - label: I searched the current collection for duplicates.
+          required: true
+

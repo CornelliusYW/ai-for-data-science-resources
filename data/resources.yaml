@@ -1,0 +1,1355 @@
+schema_version: 1
+last_reviewed: "2026-10-04"
+
+categories:
+  - slug: ai-assisted-analysis-and-sql
+    title: AI-Assisted Analysis and SQL
+    page: resources/ai-assisted-analysis-and-sql.md
+    summary: Use AI to explore datasets, write and inspect SQL, and move from a question to a reproducible analysis.
+    try_this: Give an assistant a small dataset and one metric definition. Ask for an analysis plan first, then we can verify every query, number, and chart.
+  - slug: data-preparation-and-extraction
+    title: AI for Data Preparation and Extraction
+    page: resources/data-preparation-and-extraction.md
+    summary: Turn documents and messy inputs into structured, validated data that can enter an analysis workflow.
+    try_this: Extract one messy document into a typed schema. We can validate the result and learn from the rows that failed.
+  - slug: ai-assisted-machine-learning
+    title: AI-Assisted Machine Learning
+    page: resources/ai-assisted-machine-learning.md
+    summary: Build strong baselines, compare models, and automate repetitive parts of supervised machine learning.
+    try_this: Run one AutoML baseline beside our current model and compare accuracy, runtime, leakage risk, and interpretability.
+  - slug: tabular-foundation-models
+    title: Tabular Foundation Models
+    page: resources/tabular-foundation-models.md
+    summary: Try pretrained models designed for tabular prediction and compare them with established tree-based baselines.
+    try_this: Use a tabular foundation model as the first baseline for one small dataset, then compare the result with CatBoost or XGBoost.
+  - slug: coding-agents-and-context
+    title: Coding Agents and Context Engineering
+    page: resources/coding-agents-and-context.md
+    summary: Use coding agents safely in notebooks and repositories, with durable project instructions and business context.
+    try_this: Add an AGENTS.md file and a prediction-contract.md file to one ML project, then ask an agent to refactor one repeated notebook step.
+  - slug: data-science-agents
+    title: Data Science Agents
+    page: resources/data-science-agents.md
+    summary: Build agents that plan analyses, call tools, inspect data, and complete multi-step data tasks.
+    try_this: Ask an agent to produce an analysis plan before it writes code. We can also require it to record assumptions and unresolved questions.
+  - slug: evaluation-and-reproducibility
+    title: Evaluation and Reproducibility
+    page: resources/evaluation-and-reproducibility.md
+    summary: Test AI-generated analysis and agent behavior with datasets, traces, assertions, and repeatable evaluations.
+    try_this: Save ten representative analysis questions with expected properties, then rerun them whenever we change the prompt, model, or tools.
+  - slug: mlops-and-production
+    title: MLOps and Production
+    page: resources/mlops-and-production.md
+    summary: Move AI-assisted data work from a notebook into tested, observable, deployable systems.
+    try_this: Turn one notebook into a package with one command to run it, several tests, a container, and a small deployment target.
+  - slug: visualization-and-communication
+    title: Visualization and Communication
+    page: resources/visualization-and-communication.md
+    summary: Use AI to prototype visual explanations, analytical apps, dashboards, and reports without giving up review.
+    try_this: Generate two visual explanations of the same result for different audiences, then check whether both charts preserve the same claim.
+  - slug: time-series-foundation-models
+    title: Time Series Foundation Models
+    page: resources/time-series-foundation-models.md
+    summary: Apply pretrained forecasting models and compare zero-shot forecasts with domain-specific baselines.
+    try_this: Run a zero-shot forecast on one business series and compare the result with a seasonal naive baseline using rolling backtests.
+  - slug: end-to-end-courses
+    title: End-to-End Courses
+    page: resources/end-to-end-courses.md
+    summary: Follow structured courses with code, exercises, and projects that connect several parts of the workflow.
+    try_this: Choose one course and finish a small project from it before we start another course.
+
+resources:
+  - id: chatgpt-data-analysis
+    name: Data Analysis with ChatGPT
+    url: https://help.openai.com/en/articles/8437071-data-analysis-with-chatgpt
+    category: ai-assisted-analysis-and-sql
+    type: Official Documentation
+    description: An official guide to uploading files, running analysis, creating charts, and inspecting the generated code in ChatGPT.
+    use_case: Learn the basic interaction pattern for AI-assisted exploratory analysis while keeping the underlying Python visible.
+    level: beginner
+    free: false
+    hands_on: true
+    github: false
+    provider: OpenAI
+    last_verified: "2026-10-04"
+    status: active
+    tags: [analysis, python, charts]
+  - id: pandas-ai
+    name: PandasAI
+    url: https://github.com/sinaptik-ai/pandas-ai
+    category: ai-assisted-analysis-and-sql
+    type: Tool
+    description: A Python library for asking natural-language questions about dataframes and connected data sources.
+    use_case: Prototype conversational analysis and inspect how natural-language requests become executable data operations.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: true
+    provider: Sinaptik AI
+    last_verified: "2026-10-04"
+    status: active
+    tags: [pandas, analysis, agents]
+  - id: data-formulator
+    name: Data Formulator
+    url: https://github.com/microsoft/data-formulator
+    category: ai-assisted-analysis-and-sql
+    type: Tool
+    description: A research-backed application that combines natural-language transformation with direct chart construction.
+    use_case: Explore how an AI interface can help reshape data and create visual analysis without hiding the intermediate intent.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: true
+    provider: Microsoft Research
+    last_verified: "2026-10-04"
+    status: active
+    tags: [analysis, visualization, transformation]
+  - id: lida
+    name: LIDA
+    url: https://github.com/microsoft/lida
+    category: ai-assisted-analysis-and-sql
+    type: GitHub Curriculum
+    description: A library and reference implementation for generating, explaining, and evaluating data visualizations with language models.
+    use_case: Study a concrete architecture for AI-assisted visualization and experiment with its notebooks and examples.
+    level: advanced
+    free: true
+    hands_on: true
+    github: true
+    provider: Microsoft Research
+    last_updated: "2024-08-08"
+    last_verified: "2026-10-04"
+    status: needs-review
+    maintenance_note: The reference implementation still explains the method; check dependency compatibility before adopting it in a new project.
+    tags: [visualization, evaluation, research-code]
+  - id: bigquery-data-canvas
+    name: BigQuery Data Canvas
+    url: https://docs.cloud.google.com/bigquery/docs/data-canvas
+    category: ai-assisted-analysis-and-sql
+    type: Official Documentation
+    description: Documentation for a notebook-style BigQuery workspace that can generate, edit, and explain SQL with natural language.
+    use_case: Learn an integrated warehouse workflow for moving from a data question to SQL and visual results.
+    level: intermediate
+    free: false
+    hands_on: true
+    github: false
+    provider: Google Cloud
+    last_verified: "2026-10-04"
+    status: active
+    tags: [sql, bigquery, analytics]
+  - id: snowflake-cortex-analyst
+    name: Snowflake Cortex Analyst
+    url: https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst
+    category: ai-assisted-analysis-and-sql
+    type: Official Documentation
+    description: Documentation for building natural-language analytics over Snowflake data with governed semantic models.
+    use_case: Understand how metric definitions and semantic context make text-to-SQL more reliable in production analytics.
+    level: advanced
+    free: false
+    hands_on: true
+    github: false
+    provider: Snowflake
+    last_verified: "2026-10-04"
+    status: active
+    tags: [sql, semantic-layer, analytics]
+  - id: langchain-sql-qa
+    name: LangChain SQL Agent Tutorials
+    url: https://docs.langchain.com/oss/python/learn
+    category: ai-assisted-analysis-and-sql
+    type: Tutorial
+    description: The official LangChain learning index for SQL agents, custom SQL agents, and human-in-the-loop database workflows.
+    use_case: Find current tutorials for the core steps and security boundaries behind a SQL agent.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: false
+    provider: LangChain
+    last_verified: "2026-10-04"
+    status: active
+    tags: [sql, agents, langchain]
+  - id: llamaindex-text-to-sql
+    name: LlamaIndex Text-to-SQL Guide
+    url: https://developers.llamaindex.ai/python/examples/index_structs/struct_indices/sqlindexdemo/
+    category: ai-assisted-analysis-and-sql
+    type: Tutorial
+    description: A worked example for querying SQL databases with natural language through LlamaIndex.
+    use_case: Compare a second text-to-SQL implementation and see how table context is supplied to a model.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: false
+    provider: LlamaIndex
+    last_verified: "2026-10-04"
+    status: active
+    tags: [sql, retrieval, llamaindex]
+  - id: motherduck-ai
+    name: Just Enough SQL to Safely Use AI for Data Analysis
+    url: https://motherduck.com/blog/just-enough-sql-for-ai/
+    category: ai-assisted-analysis-and-sql
+    type: Tutorial
+    description: A step-by-step SQL tutorial that shows how to generate queries with MotherDuck AI and inspect them instead of accepting them blindly.
+    use_case: Learn enough SQL to review natural-language queries and try an AI-assisted analytical database workflow.
+    level: beginner
+    free: true
+    hands_on: true
+    github: false
+    provider: MotherDuck
+    last_verified: "2026-10-04"
+    status: active
+    tags: [sql, duckdb, analytics]
+  - id: hex-magic
+    name: AI in Hex
+    url: https://learn.hex.tech/docs/getting-started/ai-overview
+    category: ai-assisted-analysis-and-sql
+    type: Official Documentation
+    description: Documentation for AI-assisted SQL, Python, charting, apps, and explanation inside collaborative analytical notebooks.
+    use_case: See how an assistant can support several steps of analysis inside one shared workspace.
+    level: beginner
+    free: false
+    hands_on: true
+    github: false
+    provider: Hex
+    last_verified: "2026-10-04"
+    status: active
+    tags: [notebooks, sql, python]
+
+  - id: unstructured-open-source
+    name: Unstructured Open Source
+    url: https://docs.unstructured.io/open-source/introduction/overview
+    category: data-preparation-and-extraction
+    type: Official Documentation
+    description: Documentation for partitioning PDFs, documents, emails, and other unstructured files into usable elements.
+    use_case: Build the ingestion step for document analysis, retrieval, or structured extraction workflows.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: false
+    provider: Unstructured
+    last_verified: "2026-10-04"
+    status: active
+    tags: [documents, extraction, ingestion]
+  - id: docling
+    name: Docling
+    url: https://docling-project.github.io/docling/
+    category: data-preparation-and-extraction
+    type: Tool
+    description: An open-source toolkit for converting PDFs and other document formats into structured representations.
+    use_case: Prepare tables, text, and document structure for downstream analysis or retrieval.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: true
+    provider: LF AI & Data
+    last_verified: "2026-10-04"
+    status: active
+    tags: [pdf, documents, extraction]
+  - id: instructor
+    name: Instructor
+    url: https://python.useinstructor.com/
+    category: data-preparation-and-extraction
+    type: Official Documentation
+    description: A Python library and set of examples for extracting validated structured outputs from language models.
+    use_case: Convert messy text into typed records with retries and validation instead of parsing free-form responses.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: false
+    provider: Instructor
+    last_verified: "2026-10-04"
+    status: active
+    tags: [structured-output, validation, pydantic]
+  - id: outlines
+    name: Outlines
+    url: https://dottxt-ai.github.io/outlines/latest/
+    category: data-preparation-and-extraction
+    type: Official Documentation
+    description: Documentation for constraining model generation to schemas, regular expressions, and other structured formats.
+    use_case: Make local-model extraction pipelines produce machine-checkable outputs.
+    level: advanced
+    free: true
+    hands_on: true
+    github: false
+    provider: dottxt
+    last_verified: "2026-10-04"
+    status: active
+    tags: [structured-output, local-models, validation]
+  - id: cleanlab-datalab
+    name: Cleanlab Datalab Tutorials
+    url: https://docs.cleanlab.ai/stable/tutorials/datalab/
+    category: data-preparation-and-extraction
+    type: Tutorial
+    description: Tutorials for finding label errors, outliers, duplicates, and other data quality problems with model-based signals.
+    use_case: Add systematic data quality checks before feature engineering and model training.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: false
+    provider: Cleanlab
+    last_verified: "2026-10-04"
+    status: active
+    tags: [data-quality, labels, outliers]
+  - id: dedupe-examples
+    name: Dedupe Examples
+    url: https://github.com/dedupeio/dedupe-examples
+    category: data-preparation-and-extraction
+    type: Example Project
+    description: Worked examples of machine-learning-assisted entity resolution, record linkage, and deduplication.
+    use_case: Learn a human-in-the-loop method for matching messy records and reviewing uncertain pairs.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: true
+    provider: Dedupe.io
+    last_updated: "2024-08-10"
+    last_verified: "2026-10-04"
+    status: needs-review
+    maintenance_note: The examples still explain the method, but the repository has not received an upstream push since August 2024.
+    tags: [entity-resolution, deduplication, data-quality]
+  - id: gliner
+    name: GLiNER
+    url: https://github.com/urchade/GLiNER
+    category: data-preparation-and-extraction
+    type: Tool
+    description: An open-source model and examples for extracting arbitrary entity types from text without task-specific training.
+    use_case: Prototype entity extraction when the schema changes often or labeled data is limited.
+    level: advanced
+    free: true
+    hands_on: true
+    github: true
+    provider: Urchade Zaratiana and contributors
+    last_verified: "2026-10-04"
+    status: active
+    tags: [ner, extraction, nlp]
+  - id: markitdown
+    name: MarkItDown
+    url: https://github.com/microsoft/markitdown
+    category: data-preparation-and-extraction
+    type: Tool
+    description: A utility for converting common files into Markdown that is easier for language models and analysis tools to consume.
+    use_case: Create a simple, inspectable preprocessing layer for document-heavy workflows.
+    level: beginner
+    free: true
+    hands_on: true
+    github: true
+    provider: Microsoft
+    last_verified: "2026-10-04"
+    status: active
+    tags: [documents, markdown, preprocessing]
+
+  - id: autogluon-tabular
+    name: AutoGluon Tabular Tutorials
+    url: https://auto.gluon.ai/stable/tutorials/tabular/index.html
+    category: ai-assisted-machine-learning
+    type: Tutorial
+    description: Tutorials with code for training, tuning, interpreting, and deploying tabular models with AutoGluon.
+    use_case: Establish a competitive automated baseline before investing in custom model development.
+    level: beginner
+    free: true
+    hands_on: true
+    github: false
+    provider: AutoGluon
+    last_verified: "2026-10-04"
+    status: active
+    tags: [automl, tabular, baseline]
+  - id: flaml-automl
+    name: FLAML Task-Oriented AutoML
+    url: https://microsoft.github.io/FLAML/docs/Use-Cases/Task-Oriented-AutoML/
+    category: ai-assisted-machine-learning
+    type: Official Documentation
+    description: Documentation and examples for cost-aware automated model and hyperparameter selection.
+    use_case: Explore AutoML under explicit time and compute budgets.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: false
+    provider: Microsoft Research
+    last_verified: "2026-10-04"
+    status: active
+    tags: [automl, tuning, efficiency]
+  - id: h2o-automl
+    name: H2O AutoML
+    url: https://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html
+    category: ai-assisted-machine-learning
+    type: Official Documentation
+    description: Documentation for automated training, leaderboard comparison, stacking, and model explanation in H2O.
+    use_case: Compare a broad set of tabular models and ensembles through one reproducible API.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: false
+    provider: H2O.ai
+    last_verified: "2026-10-04"
+    status: active
+    tags: [automl, ensembles, explainability]
+  - id: pycaret-tutorials
+    name: PyCaret Tutorials
+    url: https://pycaret.gitbook.io/docs/get-started/tutorials
+    category: ai-assisted-machine-learning
+    type: Tutorial
+    description: End-to-end tutorials for low-code classification, regression, clustering, anomaly detection, and time series work.
+    use_case: Prototype and compare standard ML workflows quickly while retaining Python code.
+    level: beginner
+    free: true
+    hands_on: true
+    github: false
+    provider: PyCaret
+    last_verified: "2026-10-04"
+    status: active
+    tags: [automl, low-code, experiments]
+  - id: azure-automl
+    name: Azure Machine Learning Automated ML
+    url: https://learn.microsoft.com/en-us/azure/machine-learning/concept-automated-ml?view=azureml-api-2
+    category: ai-assisted-machine-learning
+    type: Official Documentation
+    description: Concepts and guides for automated feature processing, model selection, tuning, and responsible model review on Azure.
+    use_case: Understand a managed AutoML workflow that connects experimentation with deployment controls.
+    level: intermediate
+    free: false
+    hands_on: true
+    github: false
+    provider: Microsoft Azure
+    last_verified: "2026-10-04"
+    status: active
+    tags: [automl, cloud, deployment]
+  - id: vertex-automl-tabular
+    name: Google Cloud Tabular Workflows
+    url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/tabular-data/tabular-workflows/overview
+    category: ai-assisted-machine-learning
+    type: Official Documentation
+    description: Documentation for end-to-end AutoML and other configurable tabular training workflows in Vertex AI.
+    use_case: Learn how a managed platform handles feature processing, architecture search, training, evaluation, and deployment.
+    level: intermediate
+    free: false
+    hands_on: true
+    github: false
+    provider: Google Cloud
+    last_verified: "2026-10-04"
+    status: active
+    tags: [automl, cloud, tabular]
+  - id: mljar-automl
+    name: MLJAR AutoML Documentation
+    url: https://supervised.mljar.com/
+    category: ai-assisted-machine-learning
+    type: Official Documentation
+    description: Documentation and examples for explainable automated machine learning in Python.
+    use_case: Generate baseline reports that include model comparison, feature importance, and validation results.
+    level: beginner
+    free: true
+    hands_on: true
+    github: false
+    provider: MLJAR
+    last_verified: "2026-10-04"
+    status: active
+    tags: [automl, reports, explainability]
+
+  - id: tabpfn
+    name: TabPFN
+    url: https://github.com/PriorLabs/TabPFN
+    category: tabular-foundation-models
+    type: Tool
+    description: The reference implementation and examples for a pretrained tabular foundation model for classification and regression.
+    use_case: Test a fast pretrained baseline on small and medium tabular datasets.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: true
+    provider: Prior Labs
+    last_verified: "2026-10-04"
+    status: active
+    tags: [tabular, foundation-model, baseline]
+  - id: tabpfn-extensions
+    name: TabPFN Extensions
+    url: https://github.com/PriorLabs/tabpfn-extensions
+    category: tabular-foundation-models
+    type: Notebook Collection
+    description: Examples and extensions for interpretation, unsupervised learning, post-hoc ensembles, and other TabPFN workflows.
+    use_case: Move beyond the basic estimator and test TabPFN in a fuller applied workflow.
+    level: advanced
+    free: true
+    hands_on: true
+    github: true
+    provider: Prior Labs
+    last_verified: "2026-10-04"
+    status: active
+    tags: [tabular, explainability, examples]
+  - id: tabpfn-docs
+    name: Prior Labs TabPFN Documentation
+    url: https://docs.priorlabs.ai/overview
+    category: tabular-foundation-models
+    type: Official Documentation
+    description: Documentation with installation steps and examples for understanding current TabPFN capabilities and limits.
+    use_case: Check supported tasks and recommended usage before evaluating the model on real data.
+    level: beginner
+    free: true
+    hands_on: true
+    github: false
+    provider: Prior Labs
+    last_verified: "2026-10-04"
+    status: active
+    tags: [tabular, foundation-model, documentation]
+  - id: tabicl
+    name: TabICL
+    url: https://github.com/soda-inria/tabicl
+    category: tabular-foundation-models
+    type: Tool
+    description: An open implementation of in-context learning for tabular classification with pretrained models and examples.
+    use_case: Compare a second tabular foundation model with TabPFN and tree-based baselines.
+    level: advanced
+    free: true
+    hands_on: true
+    github: true
+    provider: SODA, Inria
+    last_verified: "2026-10-04"
+    status: active
+    tags: [tabular, in-context-learning, classification]
+  - id: mothernet
+    name: TICL
+    url: https://github.com/microsoft/ticl
+    category: tabular-foundation-models
+    type: Tool
+    description: Microsoft's current research repository for tabular in-context learning, continued from the earlier MotherNet project.
+    use_case: Study a distinct tabular in-context learning design and reproduce experiments on tabular tasks.
+    level: advanced
+    free: true
+    hands_on: true
+    github: true
+    provider: Microsoft Research
+    last_updated: "2025-03-06"
+    last_verified: "2026-10-04"
+    status: needs-review
+    maintenance_note: Current successor to MotherNet, but the repository has not received an upstream push since March 2025.
+    tags: [tabular, in-context-learning, research-code]
+  - id: pytabkit
+    name: PyTabKit
+    url: https://github.com/dholzmueller/pytabkit
+    category: tabular-foundation-models
+    type: Tool
+    description: A benchmarking and modeling toolkit for comparing modern deep and classical tabular methods.
+    use_case: Run controlled comparisons between foundation-style models, neural methods, and tree ensembles.
+    level: advanced
+    free: true
+    hands_on: true
+    github: true
+    provider: David Holzmüller and contributors
+    last_verified: "2026-10-04"
+    status: active
+    tags: [tabular, benchmarking, deep-learning]
+
+  - id: openai-codex-docs
+    name: OpenAI Codex Documentation
+    url: https://learn.chatgpt.com/docs
+    category: coding-agents-and-context
+    type: Official Documentation
+    description: Documentation for using Codex in local projects, cloud tasks, and repository-based coding workflows.
+    use_case: Learn how to delegate bounded analysis and engineering changes while keeping the project and review process visible.
+    level: beginner
+    free: false
+    hands_on: true
+    github: false
+    provider: OpenAI
+    last_verified: "2026-10-04"
+    status: active
+    tags: [coding-agent, repositories, instructions]
+  - id: codex-prompting
+    name: Codex Prompting Guide
+    url: https://learn.chatgpt.com/docs/prompting
+    category: coding-agents-and-context
+    type: Guide
+    description: Official guidance for giving Codex clear tasks, context, constraints, and verification expectations.
+    use_case: Improve the quality of notebook refactors, pipeline changes, and repository work delegated to an agent.
+    level: intermediate
+    free: true
+    hands_on: false
+    github: false
+    provider: OpenAI
+    last_verified: "2026-10-04"
+    status: active
+    tags: [prompting, coding-agent, context]
+  - id: claude-code-docs
+    name: Claude Code Documentation
+    url: https://code.claude.com/docs/en/overview
+    category: coding-agents-and-context
+    type: Official Documentation
+    description: Documentation for an agentic coding tool that works from a terminal and understands repository context.
+    use_case: Learn another repository-based workflow for editing data projects, running commands, and reviewing changes.
+    level: beginner
+    free: false
+    hands_on: true
+    github: false
+    provider: Anthropic
+    last_verified: "2026-10-04"
+    status: active
+    tags: [coding-agent, terminal, repositories]
+  - id: claude-code-best-practices
+    name: Claude Code Best Practices
+    url: https://code.claude.com/docs/en/best-practices
+    category: coding-agents-and-context
+    type: Guide
+    description: An engineering guide to exploring a codebase, planning work, writing effective instructions, and verifying agent changes.
+    use_case: Apply its planning, context, and verification habits to data science repositories and long-running analytical work.
+    level: intermediate
+    free: true
+    hands_on: false
+    github: false
+    provider: Anthropic
+    last_verified: "2026-10-04"
+    status: active
+    tags: [coding-agent, workflow, context]
+  - id: github-copilot-docs
+    name: GitHub Copilot Documentation
+    url: https://docs.github.com/en/copilot
+    category: coding-agents-and-context
+    type: Official Documentation
+    description: Documentation for code completion, chat, coding agents, custom instructions, and repository-aware assistance.
+    use_case: Apply AI assistance in an existing GitHub workflow and define reusable repository instructions.
+    level: beginner
+    free: false
+    hands_on: true
+    github: false
+    provider: GitHub
+    last_verified: "2026-10-04"
+    status: active
+    tags: [coding-agent, github, instructions]
+  - id: gemini-cli
+    name: Gemini CLI
+    url: https://github.com/google-gemini/gemini-cli
+    category: coding-agents-and-context
+    type: Tool
+    description: An open-source terminal agent with tools for inspecting and changing a local project.
+    use_case: Experiment with a scriptable coding-agent workflow around notebooks, packages, tests, and data pipelines.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: true
+    provider: Google
+    last_verified: "2026-10-04"
+    status: active
+    tags: [coding-agent, terminal, open-source]
+  - id: agents-md
+    name: AGENTS.md
+    url: https://agents.md/
+    category: coding-agents-and-context
+    type: Guide
+    description: A simple open format for storing instructions that coding agents can discover inside a repository.
+    use_case: Record project commands, data boundaries, metric definitions, and verification steps beside the code.
+    level: beginner
+    free: true
+    hands_on: true
+    github: false
+    provider: AGENTS.md community
+    last_verified: "2026-10-04"
+    status: active
+    tags: [context, instructions, repositories]
+  - id: jupyter-ai
+    name: Jupyter AI
+    url: https://jupyter-ai.readthedocs.io/en/stable/
+    category: coding-agents-and-context
+    type: Official Documentation
+    description: Documentation for using generative AI chat and model magics directly in Jupyter environments.
+    use_case: Try AI assistance close to an existing notebook workflow and keep generated code in inspectable cells.
+    level: beginner
+    free: true
+    hands_on: true
+    github: false
+    provider: Project Jupyter
+    last_verified: "2026-10-04"
+    status: active
+    tags: [jupyter, notebooks, coding-assistant]
+  - id: nbdev
+    name: nbdev
+    url: https://nbdev.fast.ai/
+    category: coding-agents-and-context
+    type: Official Documentation
+    description: A notebook-first development system that turns tested notebooks into documented Python packages.
+    use_case: Give coding agents a clearer path from exploratory notebooks to reusable, reviewable project code.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: false
+    provider: fast.ai
+    last_verified: "2026-10-04"
+    status: active
+    tags: [notebooks, packaging, testing]
+
+  - id: microsoft-ai-agents-course
+    name: Microsoft AI Agents for Beginners
+    url: https://github.com/microsoft/ai-agents-for-beginners
+    category: data-science-agents
+    type: GitHub Curriculum
+    description: A structured course covering agent design, tool use, retrieval, planning, multi-agent patterns, and production concerns.
+    use_case: Build a broad foundation before adapting agent patterns to analytical and machine-learning tasks.
+    level: beginner
+    free: true
+    hands_on: true
+    github: true
+    provider: Microsoft
+    last_verified: "2026-10-04"
+    status: active
+    tags: [agents, course, tools]
+  - id: openai-agents-sdk
+    name: OpenAI Agents SDK
+    url: https://openai.github.io/openai-agents-python/
+    category: data-science-agents
+    type: Official Documentation
+    description: Documentation and examples for building tool-using agents with handoffs, guardrails, sessions, and tracing.
+    use_case: Implement a small analysis agent while retaining observable execution and explicit tool boundaries.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: false
+    provider: OpenAI
+    last_verified: "2026-10-04"
+    status: active
+    tags: [agents, tools, tracing]
+  - id: langgraph-introduction
+    name: LangGraph Introduction Tutorial
+    url: https://langchain-ai.github.io/langgraph/tutorials/introduction/
+    category: data-science-agents
+    type: Tutorial
+    description: A step-by-step tutorial for creating a stateful tool-using agent as an explicit graph.
+    use_case: Learn how to control loops, state, and human review in a multi-step data workflow.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: false
+    provider: LangChain
+    last_verified: "2026-10-04"
+    status: active
+    tags: [agents, graphs, human-in-the-loop]
+  - id: llamaindex-agents
+    name: LlamaIndex Agents Guide
+    url: https://developers.llamaindex.ai/python/framework/module_guides/deploying/agents/
+    category: data-science-agents
+    type: Official Documentation
+    description: Guides for building agents that use retrieval, data connectors, and custom tools.
+    use_case: Connect an analytical agent to documents, indexes, and structured data sources.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: false
+    provider: LlamaIndex
+    last_verified: "2026-10-04"
+    status: active
+    tags: [agents, retrieval, tools]
+  - id: hugging-face-agents-course
+    name: Hugging Face Agents Course
+    url: https://huggingface.co/learn/agents-course/unit0/introduction
+    category: data-science-agents
+    type: Course
+    description: A free course on agent fundamentals, frameworks, tools, and assignments that use code.
+    use_case: Learn agent concepts through short units and build working examples with open tooling.
+    level: beginner
+    free: true
+    hands_on: true
+    github: false
+    provider: Hugging Face
+    last_verified: "2026-10-04"
+    status: active
+    tags: [agents, course, open-source]
+  - id: google-adk
+    name: Google Agent Development Kit
+    url: https://adk.dev/
+    category: data-science-agents
+    type: Official Documentation
+    description: Documentation for developing, evaluating, and deploying modular tool-using agents.
+    use_case: Compare a code-first agent framework with built-in evaluation and deployment paths.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: false
+    provider: Google
+    last_verified: "2026-10-04"
+    status: active
+    tags: [agents, tools, deployment]
+  - id: crewai-docs
+    name: CrewAI Documentation
+    url: https://docs.crewai.com/
+    category: data-science-agents
+    type: Official Documentation
+    description: Documentation and examples for coordinating role-based agents and event-driven flows.
+    use_case: Prototype a workflow that separates planning, analysis, review, and reporting responsibilities.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: false
+    provider: CrewAI
+    last_verified: "2026-10-04"
+    status: active
+    tags: [multi-agent, workflows, tools]
+  - id: pydantic-ai
+    name: Pydantic AI
+    url: https://pydantic.dev/docs/ai/overview/
+    category: data-science-agents
+    type: Official Documentation
+    description: A typed Python agent framework with structured outputs, dependency injection, tools, and evaluation support.
+    use_case: Build data agents whose inputs and outputs can be validated with familiar Python models.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: false
+    provider: Pydantic
+    last_verified: "2026-10-04"
+    status: active
+    tags: [agents, typed-output, python]
+
+  - id: mlflow-genai-evaluation
+    name: MLflow GenAI Evaluation and Monitoring
+    url: https://mlflow.org/docs/latest/genai/eval-monitor/
+    category: evaluation-and-reproducibility
+    type: Official Documentation
+    description: Guides for evaluating applications, inspecting traces, comparing versions, and monitoring production behavior.
+    use_case: Connect offline test cases with trace-based review and production monitoring.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: false
+    provider: MLflow
+    last_verified: "2026-10-04"
+    status: active
+    tags: [evaluation, tracing, monitoring]
+  - id: openai-evals
+    name: OpenAI Evals
+    url: https://github.com/openai/evals
+    category: evaluation-and-reproducibility
+    type: Tool
+    description: An open framework and registry for defining and running repeatable model evaluations.
+    use_case: Study evaluation structure and create task-specific tests for analytical outputs.
+    level: advanced
+    free: true
+    hands_on: true
+    github: true
+    provider: OpenAI
+    last_verified: "2026-10-04"
+    status: active
+    tags: [evaluation, benchmarks, testing]
+  - id: langsmith-evaluation
+    name: LangSmith Evaluation
+    url: https://docs.langchain.com/langsmith/evaluation
+    category: evaluation-and-reproducibility
+    type: Official Documentation
+    description: Documentation for datasets, evaluators, experiments, pairwise comparisons, and online evaluation.
+    use_case: Build a repeatable test set for an agent and compare versions before release.
+    level: intermediate
+    free: false
+    hands_on: true
+    github: false
+    provider: LangChain
+    last_verified: "2026-10-04"
+    status: active
+    tags: [evaluation, datasets, experiments]
+  - id: deepeval
+    name: DeepEval
+    url: https://deepeval.com/docs/getting-started
+    category: evaluation-and-reproducibility
+    type: Official Documentation
+    description: Documentation for a Python testing framework with metrics for retrieval, agents, safety, and task completion.
+    use_case: Add unit-test-like checks to a data or agent application.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: false
+    provider: Confident AI
+    last_verified: "2026-10-04"
+    status: active
+    tags: [evaluation, testing, metrics]
+  - id: ragas
+    name: Ragas
+    url: https://docs.ragas.io/en/stable/
+    category: evaluation-and-reproducibility
+    type: Official Documentation
+    description: Documentation for evaluating retrieval and agentic applications with reusable metrics and experiments.
+    use_case: Measure retrieval quality when an analytical workflow depends on documents or semantic context.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: false
+    provider: Ragas
+    last_verified: "2026-10-04"
+    status: active
+    tags: [evaluation, rag, metrics]
+  - id: promptfoo
+    name: Promptfoo
+    url: https://www.promptfoo.dev/docs/intro/
+    category: evaluation-and-reproducibility
+    type: Official Documentation
+    description: A command-line evaluation framework for comparing prompts, models, assertions, and red-team tests.
+    use_case: Keep model and prompt comparisons in version-controlled configuration beside a data project.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: false
+    provider: Promptfoo
+    last_verified: "2026-10-04"
+    status: active
+    tags: [evaluation, cli, regression-testing]
+  - id: evidently
+    name: Evidently
+    url: https://docs.evidentlyai.com/introduction
+    category: evaluation-and-reproducibility
+    type: Official Documentation
+    description: Documentation for evaluating and monitoring ML and LLM systems with reports, test suites, and dashboards.
+    use_case: Track both conventional data/model quality and AI-output quality in one monitoring approach.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: false
+    provider: Evidently AI
+    last_verified: "2026-10-04"
+    status: active
+    tags: [monitoring, data-quality, evaluation]
+  - id: phoenix
+    name: Arize Phoenix
+    url: https://arize.com/docs/phoenix/
+    category: evaluation-and-reproducibility
+    type: Official Documentation
+    description: Documentation for open-source tracing, evaluation, prompt experiments, and observability.
+    use_case: Inspect why an analytical agent failed and connect traces to evaluation examples.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: false
+    provider: Arize AI
+    last_verified: "2026-10-04"
+    status: active
+    tags: [tracing, observability, evaluation]
+  - id: giskard-llm-scan
+    name: Giskard LLM Scan
+    url: https://legacy-docs.giskard.ai/en/stable/open_source/scan/scan_llm/index.html
+    category: evaluation-and-reproducibility
+    type: Tutorial
+    description: A guide with code for scanning an LLM application for reliability, security, and quality problems.
+    use_case: Add a broad diagnostic pass before writing narrower domain-specific evaluations.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: false
+    provider: Giskard
+    last_verified: "2026-10-04"
+    status: needs-review
+    maintenance_note: The scan guide is now in legacy documentation; review before relying on it for a new project.
+    tags: [evaluation, scanning, testing]
+  - id: pydantic-evals
+    name: Pydantic Evals
+    url: https://pydantic.dev/docs/ai/evals/evals/
+    category: evaluation-and-reproducibility
+    type: Official Documentation
+    description: A typed evaluation framework for datasets, evaluators, experiment runs, and result analysis in Python.
+    use_case: Define compact, code-reviewed evaluations for agents that already use typed data models.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: false
+    provider: Pydantic
+    last_verified: "2026-10-04"
+    status: active
+    tags: [evaluation, python, typed-data]
+
+  - id: mlops-zoomcamp
+    name: MLOps Zoomcamp
+    url: https://github.com/DataTalksClub/mlops-zoomcamp
+    category: mlops-and-production
+    type: GitHub Curriculum
+    description: A free project-based course covering experiment tracking, orchestration, deployment, monitoring, and engineering practices.
+    use_case: Build the production foundation needed to turn AI-assisted notebook work into reliable ML systems.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: true
+    provider: DataTalksClub
+    last_verified: "2026-10-04"
+    status: active
+    tags: [mlops, course, deployment]
+  - id: made-with-ml
+    name: Made With ML
+    url: https://madewithml.com/
+    category: mlops-and-production
+    type: Course
+    description: A course with lessons and a project on designing, developing, deploying, and iterating on production ML applications.
+    use_case: Learn how testing, data quality, serving, and monitoring fit around the model itself.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: false
+    provider: Made With ML
+    last_verified: "2026-10-04"
+    status: active
+    tags: [mlops, testing, production]
+  - id: full-stack-deep-learning
+    name: Full Stack Deep Learning
+    url: https://fullstackdeeplearning.com/
+    category: mlops-and-production
+    type: Course
+    description: Course material on the full lifecycle of deep-learning and language-model applications, from development to deployment.
+    use_case: Connect model work with data management, testing, deployment, user feedback, and product constraints.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: false
+    provider: Full Stack Deep Learning
+    last_verified: "2026-10-04"
+    status: active
+    tags: [production, llmops, course]
+  - id: mlflow-genai
+    name: MLflow for GenAI
+    url: https://mlflow.org/docs/latest/genai/
+    category: mlops-and-production
+    type: Official Documentation
+    description: Documentation for tracking, tracing, evaluating, and deploying generative AI applications with MLflow.
+    use_case: Extend an existing MLflow practice to agent and language-model workloads.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: false
+    provider: MLflow
+    last_verified: "2026-10-04"
+    status: active
+    tags: [llmops, tracing, deployment]
+  - id: bentoml-llm
+    name: BentoML LLM Guides
+    url: https://docs.bentoml.com/en/latest/examples/overview.html
+    category: mlops-and-production
+    type: Official Documentation
+    description: A curated set of runnable BentoML examples for serving language models and compound AI systems.
+    use_case: Turn a working local model or agent into a reproducible API service.
+    level: advanced
+    free: true
+    hands_on: true
+    github: false
+    provider: BentoML
+    last_verified: "2026-10-04"
+    status: active
+    tags: [serving, deployment, api]
+  - id: ray-serve-llm
+    name: Ray Serve LLM
+    url: https://docs.ray.io/en/latest/serve/llm/index.html
+    category: mlops-and-production
+    type: Official Documentation
+    description: Documentation for scalable language-model serving, autoscaling, observability, and multi-model deployments.
+    use_case: Understand the serving concerns that appear when an AI workload outgrows a single process.
+    level: advanced
+    free: true
+    hands_on: true
+    github: false
+    provider: Anyscale
+    last_verified: "2026-10-04"
+    status: active
+    tags: [serving, scaling, deployment]
+  - id: docker-ml-guide
+    name: Docker Model Runner
+    url: https://docs.docker.com/ai/model-runner/
+    category: mlops-and-production
+    type: Guide
+    description: Official documentation for pulling, packaging, running, and serving AI models through Docker tooling.
+    use_case: Build a reproducible local inference layer and package supported models as OCI artifacts.
+    level: beginner
+    free: true
+    hands_on: true
+    github: false
+    provider: Docker
+    last_verified: "2026-10-04"
+    status: active
+    tags: [containers, reproducibility, deployment]
+  - id: modal-guide
+    name: Modal Guide
+    url: https://modal.com/docs/guide
+    category: mlops-and-production
+    type: Official Documentation
+    description: Documentation and examples for running Python data and AI workloads on managed cloud compute.
+    use_case: Deploy batch jobs, APIs, and GPU workloads without first building a large platform layer.
+    level: intermediate
+    free: false
+    hands_on: true
+    github: false
+    provider: Modal
+    last_verified: "2026-10-04"
+    status: active
+    tags: [cloud, deployment, compute]
+
+  - id: streamlit-llm-tutorials
+    name: Streamlit LLM Tutorials
+    url: https://docs.streamlit.io/develop/tutorials/chat-and-llm-apps
+    category: visualization-and-communication
+    type: Tutorial
+    description: Tutorials for building conversational and generative AI interfaces in a small Python data application.
+    use_case: Turn an analysis prototype into an interactive tool that colleagues can inspect and use.
+    level: beginner
+    free: true
+    hands_on: true
+    github: false
+    provider: Streamlit
+    last_verified: "2026-10-04"
+    status: active
+    tags: [data-app, communication, python]
+  - id: gradio-chatbot-guide
+    name: Gradio Chatbot Guide
+    url: https://gradio.app/guides/creating-a-chatbot-fast
+    category: visualization-and-communication
+    type: Tutorial
+    description: A short guide to wrapping a model or agent in a browser-based conversational interface.
+    use_case: Share an analytical assistant with reviewers without building a frontend from scratch.
+    level: beginner
+    free: true
+    hands_on: true
+    github: false
+    provider: Gradio
+    last_verified: "2026-10-04"
+    status: active
+    tags: [data-app, chatbot, interface]
+  - id: power-bi-copilot
+    name: Copilot for Power BI
+    url: https://learn.microsoft.com/en-us/power-bi/create-reports/copilot-introduction
+    category: visualization-and-communication
+    type: Official Documentation
+    description: Documentation for using Copilot to explore semantic models, create report content, and summarize insights in Power BI.
+    use_case: Learn how AI assistance works when it is grounded in a governed BI model.
+    level: beginner
+    free: false
+    hands_on: true
+    github: false
+    provider: Microsoft
+    last_verified: "2026-10-04"
+    status: active
+    tags: [business-intelligence, dashboards, semantic-model]
+  - id: tableau-agent
+    name: Tableau Agent
+    url: https://help.tableau.com/current/online/en-us/web_author_einstein_faq.htm
+    category: visualization-and-communication
+    type: Official Documentation
+    description: Documentation for AI-assisted calculation, visualization, preparation, and dashboard workflows in Tableau.
+    use_case: See how AI assistance fits into an established visual analytics and governance environment.
+    level: beginner
+    free: false
+    hands_on: true
+    github: false
+    provider: Tableau
+    last_verified: "2026-10-04"
+    status: active
+    tags: [business-intelligence, dashboards, visualization]
+  - id: looker-conversational-analytics
+    name: Conversational Analytics in Looker
+    url: https://docs.cloud.google.com/looker/docs/conversational-analytics-overview
+    category: visualization-and-communication
+    type: Official Documentation
+    description: Documentation for asking natural-language questions against Looker data and governed semantic definitions.
+    use_case: Understand the role of a semantic layer in trustworthy conversational reporting.
+    level: intermediate
+    free: false
+    hands_on: true
+    github: false
+    provider: Google Cloud
+    last_verified: "2026-10-04"
+    status: active
+    tags: [business-intelligence, semantic-layer, analytics]
+
+  - id: timesfm
+    name: TimesFM
+    url: https://github.com/google-research/timesfm
+    category: time-series-foundation-models
+    type: Tool
+    description: Google's open pretrained time-series foundation model with code and examples for zero-shot forecasting.
+    use_case: Compare zero-shot forecasts with statistical and task-specific forecasting baselines.
+    level: advanced
+    free: true
+    hands_on: true
+    github: true
+    provider: Google Research
+    last_verified: "2026-10-04"
+    status: active
+    tags: [time-series, forecasting, foundation-model]
+  - id: chronos
+    name: Chronos Forecasting
+    url: https://github.com/amazon-science/chronos-forecasting
+    category: time-series-foundation-models
+    type: Tool
+    description: Amazon's pretrained forecasting models, inference library, examples, and evaluation material.
+    use_case: Test probabilistic zero-shot forecasts across a range of business series.
+    level: advanced
+    free: true
+    hands_on: true
+    github: true
+    provider: Amazon Science
+    last_verified: "2026-10-04"
+    status: active
+    tags: [time-series, forecasting, probabilistic]
+  - id: uni2ts
+    name: Uni2TS and Moirai
+    url: https://github.com/SalesforceAIResearch/uni2ts
+    category: time-series-foundation-models
+    type: Tool
+    description: A unified training and inference library for universal time-series transformers, including Moirai models.
+    use_case: Explore pretrained multivariate forecasting and reproduce benchmark workflows.
+    level: advanced
+    free: true
+    hands_on: true
+    github: true
+    provider: Salesforce AI Research
+    last_verified: "2026-10-04"
+    status: active
+    tags: [time-series, forecasting, transformer]
+  - id: lag-llama
+    name: Lag-Llama
+    url: https://github.com/time-series-foundation-models/lag-llama
+    category: time-series-foundation-models
+    type: Tool
+    description: An open foundation model for probabilistic univariate time-series forecasting with examples and checkpoints.
+    use_case: Study tokenization and probabilistic forecasting in an early open time-series foundation model.
+    level: advanced
+    free: true
+    hands_on: true
+    github: true
+    provider: Lag-Llama contributors
+    last_updated: "2025-06-06"
+    last_verified: "2026-10-04"
+    status: needs-review
+    maintenance_note: The repository still supports model comparison, but verify current dependency support before new production work.
+    tags: [time-series, forecasting, research-code]
+  - id: timegpt
+    name: Production Forecasting with TimeGPT and Polars
+    url: https://www.nixtla.io/blog/production-ready-forecasting-pipeline-with-timegpt-and-polars
+    category: time-series-foundation-models
+    type: Tutorial
+    description: A worked tutorial for forecasting, intervals, plotting, and cross-validation with the hosted TimeGPT model.
+    use_case: Compare a managed forecasting model with open-source and statistical baselines in a realistic pipeline.
+    level: beginner
+    free: false
+    hands_on: true
+    github: false
+    provider: Nixtla
+    last_verified: "2026-10-04"
+    status: active
+    tags: [time-series, forecasting, api]
+  - id: moment
+    name: MOMENT
+    url: https://github.com/moment-timeseries-foundation-model/moment
+    category: time-series-foundation-models
+    type: Tool
+    description: Open pretrained time-series models for forecasting, classification, anomaly detection, and representation learning.
+    use_case: Test one foundation model across several time-series tasks instead of forecasting alone.
+    level: advanced
+    free: true
+    hands_on: true
+    github: true
+    provider: MOMENT contributors
+    last_verified: "2026-10-04"
+    status: active
+    tags: [time-series, foundation-model, anomaly-detection]
+  - id: granite-tsfm
+    name: Granite Time Series Foundation Models
+    url: https://github.com/ibm-granite/granite-tsfm
+    category: time-series-foundation-models
+    type: Tool
+    description: IBM's open toolkit and pretrained Tiny Time Mixer models for efficient forecasting workflows.
+    use_case: Evaluate a compact foundation model where inference cost and deployment size matter.
+    level: advanced
+    free: true
+    hands_on: true
+    github: true
+    provider: IBM Research
+    last_verified: "2026-10-04"
+    status: active
+    tags: [time-series, forecasting, efficient-models]
+
+  - id: microsoft-generative-ai-course
+    name: Microsoft Generative AI for Beginners
+    url: https://github.com/microsoft/generative-ai-for-beginners
+    category: end-to-end-courses
+    type: GitHub Curriculum
+    description: A maintained course with written lessons and code samples covering language models, retrieval, agents, and application design.
+    use_case: Build a working base in generative AI before applying the techniques to data science work.
+    level: beginner
+    free: true
+    hands_on: true
+    github: true
+    provider: Microsoft
+    last_verified: "2026-10-04"
+    status: active
+    tags: [course, generative-ai, projects]
+  - id: llm-zoomcamp
+    name: LLM Zoomcamp
+    url: https://github.com/DataTalksClub/llm-zoomcamp
+    category: end-to-end-courses
+    type: GitHub Curriculum
+    description: A free project-based course on retrieval, evaluation, monitoring, and productionizing language-model applications.
+    use_case: Complete an end-to-end applied project with the engineering and evaluation work included.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: true
+    provider: DataTalksClub
+    last_verified: "2026-10-04"
+    status: active
+    tags: [course, rag, evaluation]
+  - id: fsdl-llm-bootcamp
+    name: Full Stack LLM Bootcamp
+    url: https://fullstackdeeplearning.com/llm-bootcamp/
+    category: end-to-end-courses
+    type: Course
+    description: A compact course on prompt engineering, augmented language models, LLMOps, user experience, and deployment.
+    use_case: Understand the complete application lifecycle through lectures, labs, and project material.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: false
+    provider: Full Stack Deep Learning
+    last_verified: "2026-10-04"
+    status: active
+    tags: [course, llmops, application-design]
+  - id: zero-to-ai
+    name: Zero to AI
+    url: https://github.com/PavanMudigonda/zero-to-ai
+    category: end-to-end-courses
+    type: Notebook Collection
+    description: A large curriculum with notebooks spanning language models, agents, retrieval, context, and MLOps.
+    use_case: Select focused notebook modules when you need hands-on practice with a specific technique.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: true
+    provider: Pavan Mudigonda
+    last_verified: "2026-10-04"
+    status: active
+    tags: [curriculum, notebooks, agents]
+  - id: google-ml-crash-course
+    name: Google Machine Learning Crash Course
+    url: https://developers.google.com/machine-learning/crash-course
+    category: end-to-end-courses
+    type: Course
+    description: An interactive course with exercises covering core ML, neural networks, production systems, and current AI topics.
+    use_case: Refresh the ML concepts needed to judge AI-assisted modeling choices rather than accepting them blindly.
+    level: beginner
+    free: true
+    hands_on: true
+    github: false
+    provider: Google
+    last_verified: "2026-10-04"
+    status: active
+    tags: [course, machine-learning, exercises]
+  - id: generative-ai-intensive
+    name: Gemini API Cookbook
+    url: https://github.com/google-gemini/cookbook
+    category: end-to-end-courses
+    type: Notebook Collection
+    description: Google's maintained collection of Gemini API examples and guided notebooks, organized as a hands-on learning path.
+    use_case: Learn current model, tool, structured-output, retrieval, and agent APIs through runnable examples.
+    level: intermediate
+    free: true
+    hands_on: true
+    github: true
+    provider: Google
+    last_verified: "2026-10-04"
+    status: active
+    tags: [cookbook, notebooks, agents]
+  - id: microsoft-ai-for-beginners
+    name: Microsoft AI for Beginners
+    url: https://github.com/microsoft/AI-For-Beginners
+    category: end-to-end-courses
+    type: GitHub Curriculum
+    description: A broad lesson-based course with notebooks and labs across neural networks, NLP, vision, and other AI topics.
+    use_case: Fill a specific technical gap before applying a newer AI workflow to data science.
+    level: beginner
+    free: true
+    hands_on: true
+    github: true
+    provider: Microsoft
+    last_verified: "2026-10-04"
+    status: active
+    tags: [course, notebooks, foundations]

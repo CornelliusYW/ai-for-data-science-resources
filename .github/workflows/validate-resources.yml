@@ -1,0 +1,44 @@
+name: Validate resources
+
+on:
+  pull_request:
+    paths:
+      - "data/**"
+      - "resources/**"
+      - "scripts/**"
+      - "README.md"
+      - "requirements.txt"
+      - ".github/workflows/validate-resources.yml"
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "resources/**"
+      - "scripts/**"
+      - "README.md"
+      - "requirements.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Set up Python
+        uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38 # v5.4.0
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Validate resource data
+        run: python scripts/validate_resources.py
+      - name: Check generated sections
+        run: python scripts/generate_readme.py --check
+      - name: Check repository navigation
+        run: python scripts/check_internal_links.py
+
