@@ -1,10 +1,12 @@
 # AI for Data Preparation and Extraction
 
-Data does not always arrive in a clean table. We might work with PDFs, emails, text, or duplicate records. We can use AI to structure this information, but the important part is defining the expected schema and making every failure visible.
+Data does not always come in a clean table. It can arrive as a PDF, email, long text, or many records that refer to the same entity.
+
+We can use AI to turn these sources into structured data. However, we first need to define the fields we want and what should happen when the extraction fails.
 
 ## Try this
 
-Take one messy document and extract it into a typed schema. Validate the result and review the rows that failed. For me, failed rows tell us more than a perfect-looking success rate because they show where the process needs improvement.
+Let's take one messy document and extract it into a typed schema. After that, validate the result and review the rows that failed. For me, the failed rows are important because they show us where the extraction process needs improvement.
 
 ## Resources
 
@@ -21,5 +23,5 @@ Take one messy document and extract it into a typed schema. Validate the result 
 | [MarkItDown](https://github.com/microsoft/markitdown) | Tool | Free | Hands-on | Beginner | Active |
 <!-- RESOURCE_LIST_END -->
 
-Keep the original source beside the extracted records. We can use it for manual review, debugging, and reprocessing when our schema changes.
+Keep the original source beside the extracted record. We can compare the two during review, find where the error came from, and process the source again when our schema changes.
 

@@ -2,13 +2,13 @@
 
 This collection starts with one question: **How can we learn and use AI throughout our data science workflow?**
 
-There are many AI resources available. However, a resource belongs here only when it can help a data professional understand the workflow, try it, check the result, and apply the lesson to real work.
+There are many AI resources available. However, not every resource helps us with data science work. A resource belongs here when it explains the workflow, gives us something to try, and shows enough detail to check the result.
 
-This reflects the Non-Brand Data approach. The resource should help us make a better decision, not only show us which button to click. It should make at least one part of the work clearer: the question, data, method, metric, evaluation, production process, or explanation.
+For example, a text-to-SQL tutorial should not only show us which button to click. It should explain how to inspect the generated SQL, check the metric, or handle a question the system cannot answer.
 
 ## What belongs
 
-For me, a strong resource should satisfy all of these conditions:
+For me, a resource should meet all of these conditions:
 
 1. It directly supports data analysis, data preparation, machine learning, evaluation, communication, or production work.
 2. It teaches through documentation, code, notebooks, exercises, worked examples, or a guide we can follow.
@@ -16,7 +16,7 @@ For me, a strong resource should satisfy all of these conditions:
 4. Its link works, and its dependencies or platform are current enough to use.
 5. It adds something that an existing resource does not already cover well.
 
-We prefer official documentation, maintained open-source curricula, university material, and engineering guides with code or examples. Free resources are also preferred. However, we can include a paid resource when it teaches something the free alternatives do not and we label the access requirement clearly.
+We first look at official documentation, maintained open-source courses, university material, and engineering guides with code or examples. We also prefer free resources. However, we can include a paid resource when it teaches something the free alternatives do not. In this case, we label the access requirement clearly.
 
 ## What does not belong
 
@@ -41,7 +41,7 @@ When we find a candidate, the review process is:
 7. Write a concise, factual description and use case.
 8. Run validation and regenerate the derived sections.
 
-GitHub stars can provide context, but they do not decide the resource quality. Older material can also remain when the method still applies and the examples still work.
+GitHub stars can provide context, but they do not decide whether a resource belongs here. Older material can also remain when the method still applies and the examples still work.
 
 ## Metadata conventions
 

@@ -1,10 +1,12 @@
 # Data Science Agents
 
-A data science agent combines a model with tools such as Python, SQL, search, and file access. We can use it for multi-step data work. However, we still need to decide where the agent can act and where a person should review the result.
+A data science agent combines an AI model with tools such as Python, SQL, search, and file access. This allows the agent to complete more than one step in a data task.
+
+For example, an agent can inspect a dataset, create an analysis plan, run the code, and write a report. However, we still need to decide which steps it can complete by itself and where we need to review the result.
 
 ## Try this
 
-Give an agent a dataset and ask it to produce an analysis plan before writing any code. We can also ask it to record every assumption and unresolved question.
+Let's give an agent a dataset and ask it to create an analysis plan before writing any code. We can also ask it to record every assumption and question it cannot answer.
 
 ## Resources
 
@@ -21,5 +23,5 @@ Give an agent a dataset and ask it to produce an analysis plan before writing an
 | [Pydantic AI](https://pydantic.dev/docs/ai/overview/) | Official Documentation | Free | Hands-on | Intermediate | Active |
 <!-- RESOURCE_LIST_END -->
 
-Start with a few tools and make every step visible. Asking an agent to complete the whole project might look easier, but it also makes the mistakes harder to understand.
+Start with only a few tools and keep every step visible. Asking an agent to complete the whole project might look easier. However, it also makes the mistakes harder to find and understand.
 

@@ -1,6 +1,8 @@
 # Project Ideas to Try
 
-We learn more when we use the resource for an actual project. The ideas below are small enough to finish but still large enough to show us where AI helps and where it fails.
+Reading a tutorial helps us understand the idea, but an actual project shows us what happens with the method. For example, we can find where the output is wrong, which step takes the most time, and what still needs a person to review it.
+
+The projects below are small enough to finish while still showing us where AI helps and where it fails.
 
 ## 1. Analysis copilot with a metric contract
 

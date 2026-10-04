@@ -1,10 +1,12 @@
 # Maintenance
 
-Maintaining a resource collection is more than checking whether a link still opens. A course might become paid, a repository might stop working, or two resources might begin teaching the same thing. We use automation to find these review tasks, but people still decide what belongs.
+Maintaining a resource collection is more than checking whether a link still opens. A course can become paid, a repository can stop working, or two resources can begin teaching the same thing.
+
+We use automation to find these cases. However, a person still opens the resource, checks what changed, and decides what belongs in the collection.
 
 ## Source of truth
 
-`data/resources.yaml` stores our categories and resources. We generate the README status, category table, and category-page resource tables from this file. However, the introductions and learning paths remain hand-written because they need editorial judgment.
+`data/resources.yaml` stores our categories and resources. We generate the README status, category table, and category-page resource tables from this file. However, we write the introductions and learning paths ourselves because they need our explanation and judgment.
 
 After changing the data:
 

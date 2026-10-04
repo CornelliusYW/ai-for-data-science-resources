@@ -1,10 +1,12 @@
 # Tabular Foundation Models
 
-Tabular foundation models allow us to use a pretrained model for classification or regression. They give us another baseline, especially for smaller datasets. However, we should still compare them with gradient-boosted trees and our existing feature process.
+A tabular foundation model is a pretrained model we can use for classification or regression data. Instead of training everything from the beginning, we can use the existing model to create a result.
+
+The method gives us another baseline, especially for a smaller dataset. However, we still need to compare it with gradient-boosted trees and our existing feature process.
 
 ## Try this
 
-Use a tabular foundation model as the first baseline for one small classification dataset. Then, compare the result with CatBoost or XGBoost using the same split and metric.
+Let's use a tabular foundation model on one small classification dataset. Then, compare the result with CatBoost or XGBoost using the same split and metric.
 
 ## Resources
 
@@ -19,5 +21,5 @@ Use a tabular foundation model as the first baseline for one small classificatio
 | [PyTabKit](https://github.com/dholzmueller/pytabkit) | Tool | Free | Hands-on | Advanced | Active |
 <!-- RESOURCE_LIST_END -->
 
-The comparison should not stop at predictive performance. We can also compare calibration, runtime, memory, and deployment requirements. It depends on what we need from the model.
+Accuracy is not the only result we need to check. We can also compare calibration, runtime, memory, and what is required to deploy the model. The best choice depends on what we need.
 

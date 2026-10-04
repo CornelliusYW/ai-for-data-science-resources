@@ -1,8 +1,8 @@
 # Contributing
 
-Thank you for helping us keep this collection current. Maybe you have found a course, tutorial, notebook, or guide that improved your data work. We would like to learn about it.
+Maybe you have found a course, tutorial, notebook, or guide that helped your data work. We would like to learn about it.
 
-However, a resource suggestion should do more than mention AI. It should help a data professional learn or apply AI in an actual data science workflow. The strongest resources also help us check the result and understand when the method is not suitable.
+However, a resource should do more than mention AI. It should show a data professional how to learn or use AI in an actual data science workflow. It should also give us enough information to check the result and understand where the method might fail.
 
 ## Suggest a resource
 
@@ -37,11 +37,11 @@ Affiliation disclosure is required. We review an affiliated resource with the sa
 6. Commit the generated README and category-page changes with the YAML change.
 7. Complete the pull request template, including affiliation disclosure.
 
-For a new category, explain why the existing taxonomy is not enough and provide several distinct resources that justify the split. The category size is not fixed. For me, the quality and usefulness matter more than matching another category's number.
+For a new category, explain why the existing categories are not enough and provide several different resources for it. The category size is not fixed. For me, what the resources teach matters more than matching another category's number.
 
 ## Style
 
-Use simple and direct English. Explain what the resource is, what we can learn, and where it fits. Avoid promotional language and unsupported claims. The full voice guide is in [Writing Style](docs/writing-style.md).
+Use simple and direct English. First, explain what the resource is. Then, tell us what we can learn or try and where it fits in data science work. Avoid promotional language and claims we cannot check. The full voice guide is in [Writing Style](docs/writing-style.md).
 
 Do not add a resource only because it is new, popular, or mentions AI. We should also never include API keys, private data, or copied course material.
 

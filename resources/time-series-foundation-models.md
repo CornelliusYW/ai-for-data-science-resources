@@ -1,10 +1,12 @@
 # Time Series Foundation Models
 
-Time series foundation models allow us to create a forecast without training a model from scratch. They give us a zero-shot result to compare. However, we still need time-based backtesting and a simple seasonal baseline to understand whether the model improves the forecast.
+A time series foundation model is a pretrained model we can use to create a forecast without training it from scratch. This gives us a zero-shot result that we can compare with our current method.
+
+However, one forecast is not enough to show that the model is better. We still need time-based backtesting and a simple seasonal baseline.
 
 ## Try this
 
-Run a zero-shot forecast on one business series. Compare the result with a seasonal naive baseline using several rolling backtests.
+Let's run a zero-shot forecast on one business series. Compare the result with a seasonal naive baseline using several rolling backtests.
 
 ## Resources
 
@@ -20,5 +22,5 @@ Run a zero-shot forecast on one business series. Compare the result with a seaso
 | [Granite Time Series Foundation Models](https://github.com/ibm-granite/granite-tsfm) | Tool | Free | Hands-on | Advanced | Active |
 <!-- RESOURCE_LIST_END -->
 
-We should evaluate several forecast origins. A single train-test split might hide failures that only appear in another season or business period.
+Evaluate several forecast origins. A single train-test split might hide a failure that only appears in another season or business period.
 

@@ -1,10 +1,12 @@
 # AI-Assisted Analysis and SQL
 
-As data professionals, we often start our work with a question. We can use AI to explore the data, write SQL, and create charts faster. However, we still need to compare the result with our source data and metric definitions.
+Data analysis often starts with a question. To answer it, we need to find the right data, write the query, check the number, and explain what it means.
+
+We can use AI to help with these activities. For example, it can propose an analysis plan, write SQL, or create a chart. However, the generated result can still use the wrong table, join, filter, or metric definition.
 
 ## Try this
 
-Give an assistant a small dataset and one metric definition. Ask it to create an analysis plan before writing the code. We can then check every query, number, and chart ourselves.
+Let's start with a small dataset and one metric definition. Ask an assistant to create the analysis plan before writing any code. Then, check every query, number, and chart against the data.
 
 ## Resources
 
@@ -23,5 +25,5 @@ Give an assistant a small dataset and one metric definition. Ask it to create an
 | [AI in Hex](https://learn.hex.tech/docs/getting-started/ai-overview) | Official Documentation | Paid or account required | Hands-on | Beginner | Active |
 <!-- RESOURCE_LIST_END -->
 
-For text-to-SQL work, we can begin with a small read-only database. Write down the expected grain, joins, filters, and metric definitions first. This gives us a known answer to compare against before the AI writes any SQL.
+For me, text-to-SQL is easier to learn with a small read-only database. Write down the expected grain, joins, filters, and metric definitions first. This way, we have a known result to compare with the generated SQL.
 

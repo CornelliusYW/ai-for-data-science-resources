@@ -1,10 +1,12 @@
 # Visualization and Communication
 
-We can use AI to move from an analysis to a chart, dashboard, or small data application faster. However, we still own the claim, scale, annotation, and how the visual fits our audience.
+A data analysis is not finished when we get the number. We also need to show what the result means to another person.
+
+We can use AI to create a chart, dashboard, or small data application. However, we still need to check the claim, scale, annotation, and whether the visual is suitable for the audience.
 
 ## Try this
 
-Generate two visual explanations of the same result for different audiences. Then, check whether both charts still communicate the same claim.
+Let's generate two visual explanations of the same result for different audiences. Then, check whether both charts still communicate the same claim.
 
 ## Resources
 
@@ -18,5 +20,5 @@ Generate two visual explanations of the same result for different audiences. The
 | [Conversational Analytics in Looker](https://docs.cloud.google.com/looker/docs/conversational-analytics-overview) | Official Documentation | Paid or account required | Hands-on | Intermediate | Active |
 <!-- RESOURCE_LIST_END -->
 
-Keep the data and transformation steps available for review. A chart might look convincing, but that does not mean the calculation behind it is correct.
+Keep the data and transformation steps so we can review them. A chart might look convincing, but the calculation behind it can still be wrong.
 

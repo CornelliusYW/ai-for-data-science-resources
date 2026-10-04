@@ -1,18 +1,20 @@
 <p align="center">
-  <a href="https://www.nb-data.com/"><img src="assets/non-brand-data-logo.png" alt="Non-Brand Data" width="180"></a>
+  <a href="https://www.nb-data.com/"><img src="assets/non-brand-data-logo.png" alt="Non-Brand Data" width="420"></a>
 </p>
 
 # AI for Data Science Resources
 
-Resources to learn and use AI throughout our data science workflow.
+Learning resources to use AI throughout our data science workflow.
 
-We can use AI for data analysis, SQL, machine learning, coding, evaluation, and production work. This collection helps us learn how. Curated by [Non-Brand Data](https://www.nb-data.com/), an independent publication by Cornellius Yudha Wijaya.
+AI is now used in many parts of data science. We can use it to explore a dataset, write SQL, create a machine learning baseline, or turn repeated code into a project.
 
-AI can now support more parts of our data science work. However, learning to use AI for data work is different from collecting every new AI tool.
+However, finding a place to learn each activity is not always easy. There are many resources that mention AI, but not all of them show us how it works with data.
 
-For me, the goal of this repository is simple. We keep resources that show data professionals how a process works, let us try it with real data, and give us enough detail to decide whether it fits our work. We do not need every available resource. We need the ones that help us learn, check the result, and build something we can use.
+For me, the goal of this repository is simple. I want to collect resources that we can learn from and try in our data science work. Each resource should explain the method, provide something we can follow, or help us build a result we can check.
 
-This follows how Non-Brand Data approaches technical learning. We start with the data problem, define what a good result means, try the method, and inspect where it works or fails. A tool can save us time, but our judgment is still the important part.
+The collection does not need every available AI tool. We only need the resources that help us understand what we are doing, where it can help, and where we still need to be careful.
+
+Curated by [Non-Brand Data](https://www.nb-data.com/), an independent publication by [Cornellius Yudha Wijaya](https://www.linkedin.com/in/cornellius-yudha-wijaya/).
 
 <!-- STATUS_START -->
 **Last reviewed:** 2026-10-04  
@@ -20,11 +22,11 @@ This follows how Non-Brand Data approaches technical learning. We start with the
 **Categories:** 11
 <!-- STATUS_END -->
 
-> This repository is ready for its initial public release. Resources are reviewed by a person before they are added, changed, or removed.
-
 ## Where should I start?
 
-It depends on what you want to build. Choose the path that is closest to your current work. Each path is short on purpose, so we can try one workflow before moving to another.
+It depends on what we want to build. For example, learning to use AI in our current analysis work is different from building a data agent.
+
+Choose the path that is closest to your work and try it with a dataset you already understand. We can always explore another path later.
 
 - **Use AI in my current data science work:** [analysis and SQL](resources/ai-assisted-analysis-and-sql.md) -> [coding agents and context](resources/coding-agents-and-context.md) -> [AI-assisted ML](resources/ai-assisted-machine-learning.md)
 - **Build data agents:** [coding agents and context](resources/coding-agents-and-context.md) -> [data science agents](resources/data-science-agents.md) -> [evaluation](resources/evaluation-and-reproducibility.md)
@@ -32,11 +34,11 @@ It depends on what you want to build. Choose the path that is closest to your cu
 - **Move from notebook to production:** [coding agents and context](resources/coding-agents-and-context.md) -> [evaluation](resources/evaluation-and-reproducibility.md) -> [MLOps](resources/mlops-and-production.md)
 - **Try foundation models for forecasting:** [time series foundation models](resources/time-series-foundation-models.md) -> [evaluation](resources/evaluation-and-reproducibility.md) -> [MLOps](resources/mlops-and-production.md)
 
-We can find the detailed steps and expected project outputs in [`learning-paths/`](learning-paths/).
+The detailed steps and expected outputs are available in [`learning-paths/`](learning-paths/).
 
 ## Browse by data science workflow
 
-Not every workflow has the same number of strong resources. That is fine. We add a resource when it teaches something we can test or apply, not because a category needs to reach a particular number.
+Not every workflow has the same number of resources. That is fine. We add a resource when it teaches something we can try, not because every category needs to have the same number.
 
 <!-- CATEGORY_TABLE_START -->
 | Workflow area | What it covers | Resources |
@@ -56,7 +58,7 @@ Not every workflow has the same number of strong resources. That is fine. We add
 
 ## Featured learning resources
 
-If you are unsure where to begin, we can start with the resources below. Each one gives us a clear place to begin in a different part of the workflow.
+If you are unsure where to begin, we can try one of the resources below. Each one starts from a different part of the data science workflow.
 
 - [Data Analysis with ChatGPT](https://help.openai.com/en/articles/8437071-data-analysis-with-chatgpt) shows the basic loop of uploading data, asking questions, and inspecting generated analysis.
 - [Data Formulator](https://github.com/microsoft/data-formulator) is a concrete example of AI-assisted data transformation and visualization.
@@ -77,11 +79,11 @@ Initial launch, October 2026:
 - **[Google Agent Development Kit](https://adk.dev/):** code-first agent development with evaluation and deployment material.
 - **[Pydantic Evals](https://pydantic.dev/docs/ai/evals/evals/):** typed evaluation datasets and evaluators that fit naturally into Python projects.
 
-Only resources reviewed by the maintainer appear here. Automation can help us find a candidate, but it does not decide what belongs in the collection.
+Only reviewed resources appear here. Automation can help us find a candidate, but the final decision still comes from a person.
 
 ## Projects we can try
 
-Learning becomes easier when we apply it to a small project. For example, we can try one of the projects below with data we already understand.
+Reading is a good start, but we understand the method better when we use it. For example, we can try one of the projects below with data we already understand.
 
 - Turn an existing notebook into a tested package with help from a coding agent.
 - Build a text-to-SQL assistant against a small database and a written metric layer.
@@ -94,27 +96,29 @@ See [Project Ideas to Try](projects/project-ideas.md) for scopes and review crit
 
 ## How this repository is maintained
 
-To keep the collection current, we need more than a list of links. `data/resources.yaml` is our source of truth. Validation checks the schema, category names, resource types, dates, and duplicates. A weekly process checks the links, monthly discovery proposes new candidates, and a quarterly report highlights resources that might need our attention.
+Keeping the collection current is more than checking whether a link still opens. A course can become paid, a notebook can stop working, or a better resource can become available.
+
+The `data/resources.yaml` file is our source of truth. Validation checks the fields, category names, resource types, dates, and duplicates. A weekly process checks the links, monthly discovery proposes new candidates, and a quarterly report shows us which resources might need another review.
 
 The workflow is:
 
 **discover -> verify -> propose -> human review -> merge**
 
-However, automation never adds or removes a resource on its own. We still review the material and make the final decision. Read [Maintenance](docs/maintenance.md) and [Resource Guidelines](docs/resource-guidelines.md) for the details.
+However, automation never adds or removes a resource on its own. We still open the material, check what it teaches, and make the final decision. Read [Maintenance](docs/maintenance.md) and [Resource Guidelines](docs/resource-guidelines.md) for the details.
 
 ## Contributing
 
-Maybe you have found a resource that helped your data work. We welcome the suggestion. Please read [CONTRIBUTING.md](CONTRIBUTING.md) and use the resource suggestion issue form. A good suggestion explains what we can learn, where it fits in data science work, and whether you are affiliated with it.
+Maybe you have found a course, notebook, or guide that helped your data work. We would like to learn about it. Please read [CONTRIBUTING.md](CONTRIBUTING.md) and use the resource suggestion issue form.
 
 ## About Non-Brand Data
 
-[Non-Brand Data](https://www.nb-data.com/) is an independent publication by Cornellius Yudha Wijaya. It helps data professionals make better decisions in machine learning, GenAI, and analytics through essays, field guides, templates, and examples drawn from data work.
+[Non-Brand Data](https://www.nb-data.com/) is an independent publication by [Cornellius Yudha Wijaya](https://www.linkedin.com/in/cornellius-yudha-wijaya/). I created it to share what I learn from working with data, machine learning, GenAI, and analytics.
 
-For me, knowing how to use a tool is only one part of the work. We should get the question right, understand the data, define the metric, check the analysis, and explain the result in a way people can use. This repository extends that idea to AI-assisted data science work.
+For me, knowing how to use a tool is only one part of data work. We still need to understand the problem, check the data, select the metric, and explain the result. The same idea applies when we use AI.
 
-You can learn more from the [Non-Brand Data About page](https://www.nb-data.com/about) or browse the articles, guides, and templates in the [publication archive](https://www.nb-data.com/archive).
+You can learn more from the [Non-Brand Data About page](https://www.nb-data.com/about), browse the [publication archive](https://www.nb-data.com/archive), or connect with me on [LinkedIn](https://www.linkedin.com/in/cornellius-yudha-wijaya/).
 
-We might include a Non-Brand Data resource when it meets the collection criteria. However, it follows the same review as every external resource.
+A Non-Brand Data resource can be included when it meets the same criteria as every external resource.
 
 ## License
 

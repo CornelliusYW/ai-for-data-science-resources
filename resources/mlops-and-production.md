@@ -1,10 +1,12 @@
 # MLOps and Production
 
-A notebook that works on our machine is not yet a production workflow. We still need packaging, tests, data checks, deployment, traces, and monitoring, even when an agent helped us write the first version.
+A notebook that works on our machine is a good start, but it is not yet a production workflow. Another person should be able to run it, test it, and understand what happens when something fails.
+
+We still need packaging, tests, data checks, deployment, traces, and monitoring. This does not change even when an agent helps us write the first version.
 
 ## Try this
 
-Take one notebook that we want to reuse and turn it into a package. Add one command to run it, several tests, a container, and a small deployment target.
+Let's take one notebook that we want to reuse and turn it into a package. Add one command to run it, several tests, a container, and a small deployment target.
 
 ## Resources
 
@@ -21,5 +23,5 @@ Take one notebook that we want to reuse and turn it into a package. Add one comm
 | [Modal Guide](https://modal.com/docs/guide) | Official Documentation | Paid or account required | Hands-on | Intermediate | Active |
 <!-- RESOURCE_LIST_END -->
 
-For me, the best production path is often the smallest one that solves the problem. For example, a scheduled batch job might be more suitable than an agent service that is always running.
+For me, the best production path is often the smallest one that solves the problem. For example, a scheduled batch job might be enough. We do not always need an agent service that keeps running.
 

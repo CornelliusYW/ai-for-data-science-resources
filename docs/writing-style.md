@@ -1,39 +1,44 @@
 # Writing Style
 
-This repository should read like one data professional explaining a method to another data professional. It follows the Non-Brand Data focus on making better decisions in machine learning, GenAI, and analytics.
+This repository should read like one data professional sharing what they learn with another data professional. The writing is not formal, but the explanation should still be clear.
 
 ## Voice
 
-We use simple and direct English. The tone is curious, honest, and based on data work. We explain what we can use, try, learn, compare, check, and build.
+We use simple and direct English. We first explain the topic, try something, look at the result, and share what we learn from it.
 
-Use `we` and `our` when the reader and writer share the workflow. An occasional `For me` can show that a sentence is a personal judgment rather than a universal rule.
+Use `we` and `our` when the reader and writer are learning or trying something together. Use `I`, `For me`, or `In my opinion` when the sentence is a personal experience or judgment.
 
 Natural transitions include:
 
 - For example...
 - However...
+- Let's try...
+- We can see...
 - We can use...
 - We can try...
-- What we get from this is...
+- In this case...
 - It depends on what we need.
 
 Do not force these phrases into every paragraph. The writing should still feel natural.
 
 ## Structure
 
-Start with the data problem or the work we want to complete. Explain the tool after the reader understands what it can change or improve.
+Start by explaining the topic and why we might need it. Then, define the method in simple words before moving into the example.
 
-The writing should help the reader make a decision. We do not stop after showing that a tool can produce an output. We also explain how to check the result, where it might fail, and what would make it suitable for actual work.
+Show the activity step by step. After every example, explain what we can see from the result. Do not leave a command, chart, or output without telling the reader what it means.
+
+When comparing resources, explain what you like, what feels limited, and which kind of work could fit each choice. Do not select one winner for everyone because only the reader knows what is suitable for their work.
 
 For a technical guide, the usual flow is:
 
-1. Describe the data problem or task.
+1. Introduce the topic and the problem.
 2. Define the method or tool in simple terms.
-3. Show a small example.
-4. Explain the result and limitation.
-5. Compare the available choices without pretending one choice is best for everyone.
+3. Say, `Let's try it`, and show a small example.
+4. Explain what we can see from the result.
+5. Mention the limitation or the part that still needs our attention.
+6. End with a short conclusion that repeats what we learned.
 
-Across Non-Brand Data material, a few questions appear repeatedly:
+Across the articles, a few questions appear repeatedly:
 
 - Did we define the right question?
 - Do we understand what the data represents?
@@ -64,7 +69,7 @@ Keep the answer concise. Resource metadata is not the place for a long review.
 - Em dashes
 - Descriptions that repeat the resource title without explaining its value
 
-The goal is not to sound formal. The goal is to let the reader understand the resource and decide what is suitable for their work.
+Do not polish every sentence until it sounds like company copy. Short statements, personal opinions, and direct transitions are part of the voice. We should correct unclear grammar, but we do not need to remove the human rhythm.
 
 Avoid words such as `practical`, `powerful`, `robust`, `seamless`, and `comprehensive` when they only act as praise. Replace them with evidence. For example, say that a tutorial includes a runnable notebook and an evaluation exercise instead of calling it practical.
 

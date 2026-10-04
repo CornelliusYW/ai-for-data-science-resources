@@ -1,10 +1,12 @@
 # AI-Assisted Machine Learning
 
-We can use AI-assisted machine learning to create a baseline, compare models, and reduce repetitive work. However, it does not decide our validation design, leakage rules, fairness requirements, cost, or operational constraints.
+Machine learning development contains many repeated activities. We prepare the data, train several models, compare the metrics, and record the experiment.
+
+AI and AutoML can help us complete some of this work. However, they do not decide the correct validation design, leakage rule, fairness requirement, or cost for our problem.
 
 ## Try this
 
-Run one AutoML baseline beside your current model. Compare the accuracy, runtime, leakage risk, and interpretability. A better score alone does not always mean a better model for our work.
+Let's run one AutoML baseline beside our current model. Compare the accuracy, runtime, leakage risk, and interpretability. A higher score is nice, but it does not always mean the model is better for our work.
 
 ## Resources
 
@@ -20,5 +22,5 @@ Run one AutoML baseline beside your current model. Compare the accuracy, runtime
 | [MLJAR AutoML Documentation](https://supervised.mljar.com/) | Official Documentation | Free | Hands-on | Beginner | Active |
 <!-- RESOURCE_LIST_END -->
 
-We should use the same data split and metric for every comparison. Otherwise, the leaderboard might look impressive, but we are not comparing the models fairly.
+Use the same data split and metric for every model. Otherwise, we might get an impressive leaderboard without knowing whether the comparison is fair.
 

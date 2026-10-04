@@ -1,10 +1,12 @@
 # Evaluation and Reproducibility
 
-An AI workflow might work well for one example and fail on the next one. That is why we need evaluation. We can use representative examples, deterministic checks where possible, and human review when the result needs judgment.
+An AI workflow can answer one example correctly and fail on the next one. Looking at one successful result is not enough to know whether the workflow is working.
+
+That is why we need evaluation. We can prepare examples that represent our work, check exact results when possible, and use human review when the answer needs judgment.
 
 ## Try this
 
-Save ten representative analysis questions and write down what we expect from each answer. Rerun them whenever we change the prompt, model, or tools.
+Let's save ten analysis questions and write down what we expect from each answer. Run them again whenever we change the prompt, model, or tools.
 
 ## Resources
 
@@ -23,5 +25,5 @@ Save ten representative analysis questions and write down what we expect from ea
 | [Pydantic Evals](https://pydantic.dev/docs/ai/evals/evals/) | Official Documentation | Free | Hands-on | Intermediate | Active |
 <!-- RESOURCE_LIST_END -->
 
-We should evaluate the complete task, not only whether the final answer sounds good. For data work, this means checking the selected source, generated code, numerical result, citation, and explanation.
+The final answer might sound good even when the calculation is wrong. We should check the complete task, including the selected source, generated code, numerical result, citation, and explanation.
 
